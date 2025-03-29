@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import { TaskProvider } from '../contexts/TaskContext';
+import Board from '../components/Board';
+import Header from '../components/Header';
+import TaskDialog from '../components/TaskDialog';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend';
+import { isMobile } from 'react-device-detect';
 
 const Index = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const backend = isMobile ? TouchBackend : HTML5Backend;
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <TaskProvider>
+      <div className="min-h-screen flex flex-col">
+        <div className="animated-background"></div>
+        <Header onAddTask={() => setIsDialogOpen(true)} />
+        <main className="flex-1 overflow-hidden">
+          <DndProvider backend={backend}>
+            <Board />
+          </DndProvider>
+        </main>
+        
+        <TaskDialog
+          isOpen={isDialogOpen}
+          onClose={() => setIsDialogOpen(false)}
+        />
       </div>
-    </div>
+    </TaskProvider>
   );
 };
 
