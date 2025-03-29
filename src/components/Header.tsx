@@ -1,17 +1,19 @@
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 
 interface HeaderProps {
   onAddTask: () => void;
+  children?: ReactNode;
 }
 
-const Header = ({ onAddTask }: HeaderProps) => {
+const Header = ({ onAddTask, children }: HeaderProps) => {
   return (
     <header className="border-b border-border bg-card/60 backdrop-blur-sm sticky top-0 z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
+          {children}
           <div className="mr-2 text-accent">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
