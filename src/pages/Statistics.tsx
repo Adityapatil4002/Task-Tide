@@ -1,15 +1,17 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, CheckSquare, Layers, Calendar, BarChart3, ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowLeft, CheckSquare, Layers, Calendar, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StatsCard from '@/components/StatsCard';
+import ProjectStats from '@/components/ProjectStats';
 import {
   summaryStats,
   projectProgressData,
   taskPriorityData,
   teamPerformanceData,
-  weeklyProductivityData
+  weeklyProductivityData,
+  projectStats
 } from '@/utils/mockStatsData';
 import {
   ChartContainer,
@@ -56,7 +58,7 @@ const Statistics = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-xl font-bold">Statistics</h1>
+            <h1 className="text-xl font-bold">Project Statistics</h1>
           </div>
           <Button variant="outline" size="sm">
             <Calendar className="h-4 w-4 mr-2" />
@@ -70,15 +72,15 @@ const Statistics = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatsCard 
             title="Total Projects" 
-            value={summaryStats.totalProjects}
-            description={`${summaryStats.activeProjects} active projects`}
+            value={projectStats.totalProjects}
+            description={`${projectStats.activeProjects} active projects`}
             icon={<Layers className="h-4 w-4" />}
             trend={{ value: 12, isPositive: true }}
           />
           <StatsCard 
-            title="Total Tasks" 
-            value={summaryStats.totalTasks}
-            description={`${summaryStats.completedTasks} completed tasks`}
+            title="Team Members" 
+            value={projectStats.teamMembers}
+            description="Across all projects"
             icon={<CheckSquare className="h-4 w-4" />}
             trend={{ value: 8, isPositive: true }}
           />
@@ -90,9 +92,9 @@ const Statistics = () => {
             trend={{ value: 5, isPositive: true }}
           />
           <StatsCard 
-            title="Overdue Tasks" 
-            value={summaryStats.overdueTask}
-            description="Tasks that missed deadline"
+            title="Avg. Completion Time" 
+            value={projectStats.avgCompletionTime}
+            description="Per project"
             icon={<Calendar className="h-4 w-4" />}
             trend={{ value: 2, isPositive: false }}
           />
@@ -143,7 +145,7 @@ const Statistics = () => {
 
           {/* Task Priority Distribution */}
           <div className="bg-card rounded-lg p-4 border border-border">
-            <h2 className="text-lg font-semibold mb-4">Task Priority Distribution</h2>
+            <h2 className="text-lg font-semibold mb-4">Project Priority Distribution</h2>
             <div className="h-[300px] flex items-center justify-center">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -161,7 +163,7 @@ const Statistics = () => {
                       <Cell key={`cell-${index}`} fill={entry.fill} />
                     ))}
                   </Pie>
-                  <Tooltip formatter={(value) => [`${value} tasks`, 'Count']} />
+                  <Tooltip formatter={(value) => [`${value} projects`, 'Count']} />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
@@ -170,7 +172,7 @@ const Statistics = () => {
         </div>
 
         {/* Charts Row 2 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Team Performance */}
           <div className="bg-card rounded-lg p-4 border border-border">
             <h2 className="text-lg font-semibold mb-4">Team Performance</h2>
@@ -219,6 +221,9 @@ const Statistics = () => {
             </div>
           </div>
         </div>
+
+        {/* Project Members Section */}
+        <ProjectStats />
       </main>
     </div>
   );

@@ -27,6 +27,15 @@ export const teamPerformanceData = [
   { name: 'Team Delta', tasks: 29 },
 ];
 
+// Project statistics
+export const projectStats = {
+  totalProjects: 12,
+  activeProjects: 8,
+  completedProjects: 4,
+  teamMembers: 24,
+  avgCompletionTime: "14 days",
+};
+
 // Overall summary statistics
 export const summaryStats = {
   totalProjects: 12,
@@ -46,4 +55,12 @@ export const weeklyProductivityData = [
   { day: 'Fri', productivity: 65 },
   { day: 'Sat', productivity: 45 },
   { day: 'Sun', productivity: 30 },
+];
+
+// Project members data
+export const projectMembersData = [
+  { name: 'Alex Johnson', tasksCompleted: 24, projectsInvolved: 3 },
+  { name: 'Taylor Smith', tasksCompleted: 18, projectsInvolved: 2 },
+  { name: 'Morgan Lee', tasksCompleted: 31, projectsInvolved: 4 },
+  { name: 'Jordan Casey', tasksCompleted: 16, projectsInvolved: 2 },
 ];
