@@ -1,8 +1,17 @@
-# Welcome to your Lovable project
 
 ## Project info
+TaskTide is an advanced project management tool that goes beyond a regular to-do list. It is designed to manage projects efficiently by incorporating member collaboration and task tracking. The application also provides insightful statistical data on project progress, making it easier to monitor and achieve goals. Additionally, TaskTide offers the flexibility of a traditional to-do list for personal task management.
 
+✨ Key Features:
+📋 Project Management: Seamlessly create and manage projects with multiple team members.
 
+👥 Team Collaboration: Assign tasks to members and track their contributions.
+
+📊 Progress Tracking: Get detailed statistical insights on project status and completion rate.
+
+✅ To-Do List: Manage personal tasks with an intuitive and easy-to-use to-do list feature.
+
+🎨 Dark Theme & Animated Background: Enjoy an engaging user experience with a sleek dark theme and dynamic animations.
 ## How can I edit this code?
 
 There are several ways of editing your application.
