@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FolderKanban, CheckSquare, BarChart3, Settings, Users, Clock, Filter, Calendar, Bell, PieChart, CreditCard } from 'lucide-react';
+import { FolderKanban, CheckSquare, BarChart3, Settings, Users, Clock, Filter, Calendar, Bell, PieChart, CreditCard, ArrowLeft } from 'lucide-react';
 
 const Index = () => {
   const menuItems = [
