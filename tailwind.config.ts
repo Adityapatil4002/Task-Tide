@@ -99,13 +99,20 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'gradient-xy': {
+					'0%, 100%': { backgroundPosition: '0% 0%' },
+					'25%': { backgroundPosition: '100% 0%' },
+					'50%': { backgroundPosition: '100% 100%' },
+					'75%': { backgroundPosition: '0% 100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'gradient-animation': 'gradient-animation 15s ease infinite'
+				'gradient-animation': 'gradient-animation 15s ease infinite',
+				'gradient-xy': 'gradient-xy 6s linear infinite',
 			}
 		}
 	},

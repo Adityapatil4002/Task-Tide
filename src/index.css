@@ -49,6 +49,16 @@
   }
 }
 
+@layer utilities {
+  .bg-size-200 {
+    background-size: 200% 200%;
+  }
+  
+  .animate-gradient-xy {
+    animation: gradient-xy 6s linear infinite;
+  }
+}
+
 .animated-background {
   position: fixed;
   top: 0;
@@ -101,6 +111,26 @@
 .menu-card:hover::before {
   opacity: 1;
   transform: scale(1);
+}
+
+.screenshot-card {
+  position: relative;
+  isolation: isolate;
+}
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
 }
 
 @keyframes float {
