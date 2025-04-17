@@ -25,7 +25,7 @@ export const menuItems: MenuItem[] = [
     color: 'from-purple-500/20 to-purple-700/20 border-purple-500/30',
     hoverColor: 'group-hover:from-purple-500/30 group-hover:to-purple-700/30',
     iconColor: 'text-purple-400',
-    screenshot: '/lovable-uploads/839f6d51-8bb1-4921-adec-aae3195ffb57.png'
+    screenshot: '/project-manage.png'
   },
   {
     id: 'todos',
@@ -36,7 +36,7 @@ export const menuItems: MenuItem[] = [
     color: 'from-blue-500/20 to-blue-700/20 border-blue-500/30',
     hoverColor: 'group-hover:from-blue-500/30 group-hover:to-blue-700/30',
     iconColor: 'text-blue-400',
-    screenshot: '/lovable-uploads/64d6c571-4de2-48c7-bff9-fde73b6f83c8.png'
+    screenshot: '/to-do.png'
   },
   {
     id: 'statistics',
@@ -47,7 +47,7 @@ export const menuItems: MenuItem[] = [
     color: 'from-green-500/20 to-green-700/20 border-green-500/30',
     hoverColor: 'group-hover:from-green-500/30 group-hover:to-green-700/30',
     iconColor: 'text-green-400',
-    screenshot: '/lovable-uploads/6ca42fd4-6738-46b5-9799-a884f61a0a5b.png'
+    screenshot: '/stat.png'
   },
   {
     id: 'settings',
@@ -58,7 +58,7 @@ export const menuItems: MenuItem[] = [
     color: 'from-orange-500/20 to-orange-700/20 border-orange-500/30',
     hoverColor: 'group-hover:from-orange-500/30 group-hover:to-orange-700/30',
     iconColor: 'text-orange-400',
-    screenshot: '/lovable-uploads/b5b39830-d610-4af4-b2fe-d8e44ee97e2c.png'
+    screenshot: '/setting.png'
   }
 ];
 
